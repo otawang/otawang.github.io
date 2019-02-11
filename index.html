@@ -67,8 +67,8 @@
   
     <article id="post-typescript-study1" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/08/typescript-study1/" class="article-date">
-  <time datetime="2019-02-08T04:53:49.000Z" itemprop="datePublished">2019-02-08</time>
+    <a href="/2019/02/11/typescript-study1/" class="article-date">
+  <time datetime="2019-02-11T04:53:49.000Z" itemprop="datePublished">2019-02-11</time>
 </a>
     
   <div class="article-category">
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/08/typescript-study1/">타입 스크립트 스터디 1주차</a>
+      <a class="article-title" href="/2019/02/11/typescript-study1/">타입 스크립트 스터디 1주차</a>
     </h1>
   
 
@@ -91,19 +91,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="타입-스크립트-스터디-1주차"><a href="#타입-스크립트-스터디-1주차" class="headerlink" title="타입 스크립트 스터디 1주차"></a>타입 스크립트 스터디 1주차</h1><h2 id="환경-구축"><a href="#환경-구축" class="headerlink" title="환경 구축"></a>환경 구축</h2><p><a href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html</a> </p>
-<h2 id="Basic-Types"><a href="#Basic-Types" class="headerlink" title="Basic Types"></a>Basic Types</h2><h3 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h3><ul>
+        <h1 id="환경-구축"><a href="#환경-구축" class="headerlink" title="환경 구축"></a>환경 구축</h1><p><a href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html</a> </p>
+<h1 id="Basic-Types"><a href="#Basic-Types" class="headerlink" title="Basic Types"></a>Basic Types</h1><h2 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h2><ul>
 <li>true/false 값을 가지는 가장 기본적인 타입</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isDone : <span class="built_in">boolean</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="number"><a href="#number" class="headerlink" title="number"></a>number</h3><ul>
+<h2 id="number"><a href="#number" class="headerlink" title="number"></a>number</h2><ul>
 <li>자바스크립트나 typescript 둘 다 floating point values</li>
 <li>10, 16, 8, 2 진수 전부 지원</li>
 <li>target을 ES5로 할 경우 8,2진수는 ES5에서 지원안되기 때문에 10진수 전환</li>
 <li>8,2진수의 경우 ECMAscript 2015+ 부터 지원</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> decimal: <span class="built_in">number</span> = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> hex: <span class="built_in">number</span> = <span class="number">0xf00d</span>;</span><br><span class="line"><span class="keyword">let</span> binary: <span class="built_in">number</span> = <span class="number">0b10</span>;</span><br><span class="line"><span class="keyword">let</span> octal: <span class="built_in">number</span> = <span class="number">0o71</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><ul>
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><ul>
 <li>“, ‘를 사용하여 표시</li>
 <li>텍스트 데이터를 참조하기 위해서 string 타입을 사용</li>
 </ul>
@@ -112,17 +112,17 @@
 <li><code></code>를 활용해서 template strings 를 사용할 수 있다(ES2015+ 에서 지원)</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fullName: <span class="built_in">string</span> = <span class="string">'Dongwoo Seo'</span>;</span><br><span class="line"><span class="keyword">let</span> age: <span class="built_in">number</span>= <span class="number">38</span>;</span><br><span class="line"><span class="keyword">let</span> sentence : <span class="built_in">string</span> = <span class="string">`Hello, my name is <span class="subst">$&#123;fullName&#125;</span>.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">I'll be <span class="subst">$&#123;age + 1&#125;</span> years old next year.</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="array"><a href="#array" class="headerlink" title="array"></a>array</h3><ul>
+<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><ul>
 <li>javascript 와 같이 배열을 지원</li>
 <li>배열을 구성하는 방법으로 2가지를 지원</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//첫 번째 방법</span></span><br><span class="line"><span class="keyword">let</span> list1: <span class="built_in">number</span>[] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//두 번째 방법</span></span><br><span class="line"><span class="keyword">let</span> list2: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt; = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br></pre></td></tr></table></figure>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><ul>
+<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><ul>
 <li>배열 중에서 각 element 의 type을 정하고 싶을 때 사용</li>
 <li>element의 타입이 굳이 같을 필요는 없음.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x: [<span class="built_in">string</span>, <span class="built_in">number</span>];</span><br><span class="line"></span><br><span class="line">x = [<span class="string">'hello'</span>, <span class="number">10</span>];</span><br><span class="line">x = [<span class="number">10</span>, <span class="string">'hello'</span>]; <span class="comment">//Error tuple 설정이 달라서</span></span><br><span class="line">x = [<span class="string">'hello'</span>, <span class="number">10</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="string">'efwefwefwf'</span>]; <span class="comment">//Error 2개만 설정했는데 2개 이상아리서 에러</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x[<span class="number">0</span>].substr(<span class="number">1</span>));</span><br><span class="line"><span class="built_in">console</span>.log(x[<span class="number">1</span>].substr(<span class="number">1</span>));        <span class="comment">// Error 숫자에 없는 메소드</span></span><br><span class="line"></span><br><span class="line">x[<span class="number">3</span>] = <span class="string">"world"</span>; <span class="comment">// OK, 'string' can be assigned to 'string | number' --&gt; 실제로는 에러?</span></span><br><span class="line"><span class="built_in">console</span>.log(x[<span class="number">5</span>].toString()); <span class="comment">// OK, 'string' and 'number' both have 'toString' --&gt; 실제로는 에러?</span></span><br><span class="line">x[<span class="number">6</span>] = <span class="literal">true</span>; <span class="comment">// Error, 'boolean' isn't 'string | number'</span></span><br></pre></td></tr></table></figure>
-<h3 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h3><ul>
+<h2 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h2><ul>
 <li>c# 언어와 비슷하게 숫자 대신 문자로 구성</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Color &#123;Red, Green, Blue&#125;;</span><br><span class="line"><span class="keyword">let</span> c: Color = Color.Red;</span><br></pre></td></tr></table></figure>
@@ -134,7 +134,7 @@
 <li>숫자를 프로퍼티로 할 경우 Text값을 반환</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Color &#123;Red = <span class="number">1</span>, Green, Blue&#125;;  <span class="comment">//1부터 시작</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Color.Red); <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(Color[Color.Red]); <span class="comment">//Red</span></span><br></pre></td></tr></table></figure>
-<h3 id="any"><a href="#any" class="headerlink" title="any"></a>any</h3><ul>
+<h2 id="any"><a href="#any" class="headerlink" title="any"></a>any</h2><ul>
 <li>application이 동작하기 전 까지 타입을 선언하지 못 하는 경우가 발생할 수 있음.</li>
 <li>그렇게 때문에 dynamic type이 필요함. 이럴 경우 <code>any</code> 타입을 사용</li>
 <li><code>any</code> 타입을 선언할 경우 컴파일 시 type check를 하지 않음</li>
@@ -148,20 +148,20 @@
 <li>배열을 표시할 때 각각이 다른 타입일 경우에도 사용 가능</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list: <span class="built_in">any</span>[] = [<span class="number">1</span>, <span class="literal">true</span>, <span class="string">'sdqwdqwdqwdqwdqwd'</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(list[<span class="number">0</span>]); <span class="comment">//1</span></span><br><span class="line">list[<span class="number">1</span>] = <span class="number">3231232213</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="void"><a href="#void" class="headerlink" title="void"></a>void</h3><ul>
+<h2 id="void"><a href="#void" class="headerlink" title="void"></a>void</h2><ul>
 <li>return 값이 없는 경우에 사용</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">warnUser</span>(<span class="params"></span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"This is my warning message"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>void type은 함수에서만 유용하다. (변수 선언 시에는 null 또는 undefined 만 가능)</li>
 </ul>
-<h3 id="null-과-undefined"><a href="#null-과-undefined" class="headerlink" title="null 과 undefined"></a>null 과 undefined</h3><ul>
+<h2 id="null-과-undefined"><a href="#null-과-undefined" class="headerlink" title="null 과 undefined"></a>null 과 undefined</h2><ul>
 <li>타입이름으로 가지고 있지만 그것 스스로는 쓸일이 없음</li>
 <li>기본적으로 null, undefined의 경우 다른 타입의 서브 타입으로 쓰인다.(number type에 값이 없는 경우 undefied 사용 등등)</li>
 <li><code>--strictNullChecks</code> flag 를 사용할 경우 <code>null</code>, <code>undefined</code>은 명시적으로 선언된 곳이나 <code>void</code>에서만 사용가능</li>
 <li>위에 같이 설정할 경우 <code>null</code>, <code>undefined</code> 로 발생할 수 있는 버그를 줄일 수 있기 때문에 설정하는 것을 추천</li>
 </ul>
-<h3 id="never"><a href="#never" class="headerlink" title="never"></a>never</h3><ul>
+<h2 id="never"><a href="#never" class="headerlink" title="never"></a>never</h2><ul>
 <li>절대로 발생하지 않는 값의 타입?</li>
 <li>예로 never는 항상 에러가 발생하거나 리턴이 될 수 없는 함수</li>
 <li>변수의 경우는 true값이 나올 수 없는 변수</li>
@@ -169,33 +169,33 @@
 <li>하지만 다른 모든 타입은 never를 할당 받을 수 없다.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Function returning never must have unreachable end point</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">message: <span class="built_in">string</span></span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Inferred return type is never</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fail</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> error(<span class="string">"Something failed"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Function returning never must have unreachable end point</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">infiniteLoop</span>(<span class="params"></span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a:never = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ul>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><ul>
 <li>Object는 non-primitive type</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="function"><span class="keyword">function</span> <span class="title">create</span>(<span class="params">o: object | <span class="literal">null</span></span>): <span class="title">void</span></span>;</span><br><span class="line"></span><br><span class="line">create(&#123; prop: <span class="number">0</span> &#125;); <span class="comment">// OK</span></span><br><span class="line">create(<span class="literal">null</span>); <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line">create(<span class="number">42</span>); <span class="comment">// Error</span></span><br><span class="line">create(<span class="string">"string"</span>); <span class="comment">// Error</span></span><br><span class="line">create(<span class="literal">false</span>); <span class="comment">// Error</span></span><br><span class="line">create(<span class="literal">undefined</span>); <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
-<h3 id="Type-assertions"><a href="#Type-assertions" class="headerlink" title="Type assertions"></a>Type assertions</h3><ul>
+<h2 id="Type-assertions"><a href="#Type-assertions" class="headerlink" title="Type assertions"></a>Type assertions</h2><ul>
 <li>다른 언어에서는 type casting과 비슷</li>
 <li>다른 언어와 다른 점은 컴파일러에서 type casting에 맞게 변경해주는 것이 아니고 개발자가 이건 내가 알고 있으니 이렇게 처리해 하는 방식으로 컴파일러에게 알려주는 것</li>
 <li>그래서 컴파일 시에 잘못된 값이더라도 에러가 발생하지 않음</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 첫 번째 angle-bracket을 사용하는 방법</span></span><br><span class="line"><span class="keyword">let</span> someValue: <span class="built_in">any</span> = <span class="string">"this is a string"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength: <span class="built_in">number</span> = (&lt;<span class="built_in">string</span>&gt;someValue).length;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 두 번째 as를 사용하는 방법</span></span><br><span class="line"><span class="keyword">let</span> someValue: <span class="built_in">any</span> = <span class="string">"this is a string"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength: <span class="built_in">number</span> = (someValue <span class="keyword">as</span> <span class="built_in">string</span>).length;</span><br></pre></td></tr></table></figure>
-<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><ul>
+<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><ul>
 <li>var 대신 let을 사용하자!</li>
 <li>왜?</li>
 <li><a href="http://hacks.mozilla.or.kr/2016/03/es6-in-depth-let-and-const/" target="_blank" rel="noopener">http://hacks.mozilla.or.kr/2016/03/es6-in-depth-let-and-const/</a></li>
 </ul>
-<h2 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h2><h3 id="Variable-Declarations"><a href="#Variable-Declarations" class="headerlink" title="Variable Declarations"></a>Variable Declarations</h3><ul>
+<h1 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h1><h2 id="Variable-Declarations"><a href="#Variable-Declarations" class="headerlink" title="Variable Declarations"></a>Variable Declarations</h2><ul>
 <li>ECMAscript 2015+부터 <code>let</code> 과 <code>const</code>를 이용해서 변수를 선언하는 방법이 새로 소개가 되었음</li>
 <li><code>let</code> 은 몇몇 개념 상으로 <code>var</code> 와 비슷하지만 몇몇 단점을 보완해서 나온 새로운 개념</li>
 <li><code>const</code>와 <code>let</code>의 차이는 재할당 가능 여부.<code>const</code>는 재할당이 불가능하지만, <code>let</code>은 재할당이 가능하다.</li>
 <li>typescript에서도 <code>const</code>와 <code>let</code> 을 지원</li>
 <li>여기서는 우리가 <code>var</code>를 왜 쓰지 않아야 하는지에 대해서 좀 더 자세하게 설명</li>
 </ul>
-<h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><ul>
+<h2 id="var"><a href="#var" class="headerlink" title="var"></a>var</h2><ul>
 <li>ECMAscript 5까지 사용했던 변수 선언 방법<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a= <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> b = a + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g = f();</span><br><span class="line"></span><br><span class="line">g();        <span class="comment">//결과 값은 11</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> b = g();</span><br><span class="line">    a = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f2();       <span class="comment">//결과 값은 2</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="scope-rules"><a href="#scope-rules" class="headerlink" title="scope rules"></a>scope rules</h4><ul>
+<h3 id="scope-rules"><a href="#scope-rules" class="headerlink" title="scope rules"></a>scope rules</h3><ul>
 <li><code>var</code>는 다른 언어들과 다른 특이한 scope를 가지고 있다(function scoping)</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">shouldInitialize: <span class="built_in">boolean</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (shouldInitialize) &#123;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="literal">true</span>); <span class="comment">// 10</span></span><br><span class="line">f(<span class="literal">false</span>); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
@@ -207,11 +207,11 @@
 </ul>
 </li>
 </ul>
-<h3 id="let-1"><a href="#let-1" class="headerlink" title="let"></a>let</h3><ul>
+<h2 id="let-1"><a href="#let-1" class="headerlink" title="let"></a>let</h2><ul>
 <li>var 선언 시 위와 같은 문제가 있을 수 있어서 scoping 전환이 필요</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> hello = <span class="string">'hello!!!'</span>; <span class="comment">//사용하는 방법은 비슷</span></span><br></pre></td></tr></table></figure>
-<h4 id="block-scoping"><a href="#block-scoping" class="headerlink" title="block-scoping"></a>block-scoping</h4><ul>
+<h3 id="block-scoping"><a href="#block-scoping" class="headerlink" title="block-scoping"></a>block-scoping</h3><ul>
 <li>일반적인 프로그램과 같은 block-scoping 을 가진다.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">input: <span class="built_in">boolean</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (input) &#123;</span><br><span class="line">        <span class="keyword">let</span> b = a + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> b;   <span class="comment">//Error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -219,7 +219,7 @@
 <li>let은 var와 다르게 hoisting 이 발생하지 않는다.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a++;    <span class="comment">//error (temporal dead zone 이라고 함)</span></span><br><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure>
-<h4 id="Re-declarations-and-Shadowing"><a href="#Re-declarations-and-Shadowing" class="headerlink" title="Re-declarations and Shadowing"></a>Re-declarations and Shadowing</h4><ul>
+<h3 id="Re-declarations-and-Shadowing"><a href="#Re-declarations-and-Shadowing" class="headerlink" title="Re-declarations and Shadowing"></a>Re-declarations and Shadowing</h3><ul>
 <li>var의 경우는 여러 번 다시 선언해도 에러 없이 진행 이런 경우 잘못하면 버그를 발생할 여지가 많음.</li>
 <li>let의 경우는 한번 이상 제 선언할 경우 에러 발생</li>
 <li><p>Shadowing 은 중첩된 스코프에서 기존의 변수 이름을 사용하는 것</p>
@@ -228,13 +228,13 @@
 <li><p>하지만 명확한 코드를 위해서 하지 않는 것이 좋다.</p>
 </li>
 </ul>
-<h4 id="block-scoped-variable-capturing"><a href="#block-scoped-variable-capturing" class="headerlink" title="block-scoped variable capturing"></a>block-scoped variable capturing</h4><ul>
+<h3 id="block-scoped-variable-capturing"><a href="#block-scoped-variable-capturing" class="headerlink" title="block-scoped variable capturing"></a>block-scoped variable capturing</h3><ul>
 <li><code>let</code>, <code>const</code>의 경우는 block scoping 을 가지기 때문에 block 생성 시에 새로운 scope를 가진다.</li>
 <li><code>var</code> 같은 경우는 function scoping 이기 때문에 function 선언 시에 새로운 scope를 가지기 때문에 위에 발생한 문제를 해결하기 위해서 IIFE를 활용했다.</li>
 <li><code>let</code>, <code>const</code>는 IIFE(Immediately Invoked Function Expression<a href="https://developer.mozilla.org/ko/docs/Glossary/IIFE" target="_blank" rel="noopener">[링크]</a>)를 활용하지 않더라고 아래와 같이 각 변수를 capturing 해서 사용할 수 있다.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">theCityThatAlwaysSleeps</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> getCity;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> city = <span class="string">"Seattle"</span>;</span><br><span class="line">        getCity = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> city;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> getCity();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(i); &#125;, <span class="number">100</span> * i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><ul>
 <li><code>let</code>과 거의 비슷하니 재활당이 되지 않는다.</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numLivesForCat = <span class="number">9</span>;</span><br></pre></td></tr></table></figure>
@@ -245,29 +245,29 @@
 <ul>
 <li>타입 스크립트에서는 특정 프로퍼티를 readonly로 설정할 수 있는데, 이것은 다음 시간에..</li>
 </ul>
-<h3 id="let-vs-const"><a href="#let-vs-const" class="headerlink" title="let vs const"></a>let vs const</h3><ul>
+<h2 id="let-vs-const"><a href="#let-vs-const" class="headerlink" title="let vs const"></a>let vs const</h2><ul>
 <li>될 수 있으면 <code>const</code> 를 활용</li>
 <li>재할당이 필요한 경우에만 <code>let</code>을 활용하자.</li>
 <li>변수 선언 시에 이게 재할당이 필요한지 아닌지 한번 고민해보는 습관을 가져보자</li>
 </ul>
-<h3 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h3><ul>
+<h2 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h2><ul>
 <li>지금 특징들은 ECMAscript 2015+ 이후에 사용가능한 것들<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> input = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [a,b] = input;        <span class="comment">//a=1, b=2;</span></span><br><span class="line">[a,b] = [b,a];              <span class="comment">//변수 교환;</span></span><br><span class="line"><span class="keyword">let</span> [c,...etc] = input;     <span class="comment">//c=1, etc = [2,3,4,5]</span></span><br><span class="line"><span class="keyword">let</span> [,d,e,,f] = input;      <span class="comment">//d=2, e=3, f=5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> o = &#123;g:<span class="string">'foo'</span>, h:<span class="number">12</span>, i:<span class="string">'bar'</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;g,h&#125; = o;              <span class="comment">//g='foo', h=12</span></span><br><span class="line"><span class="keyword">let</span> &#123;g, ...etc2&#125; = o;       <span class="comment">//g='foo', etc2=&#123;h:12, i:'bar'&#125;</span></span><br><span class="line"><span class="keyword">let</span> &#123;g:g1, h:h1&#125; = o;       <span class="comment">//g1='foo', h1=12</span></span><br><span class="line"><span class="keyword">let</span> &#123;g, k=<span class="number">100</span>&#125; = o;         <span class="comment">//g='foo', k=100 (기본값 설정)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> C = &#123; a: <span class="built_in">string</span>, b?: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">&#123; a, b &#125;: C</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">&#123; a, b &#125; = &#123; a: "", b: 0 &#125;</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">f(); <span class="comment">// 좋아요, 기본값 &#123; a: "", b: 0 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">&#123; a, b = 0 &#125; = &#123; a: "" &#125;</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">f(&#123; a: <span class="string">"yes"</span> &#125;); <span class="comment">// 좋아요, 기본값 b = 0</span></span><br><span class="line">f(); <span class="comment">// 좋아요, 기본값은 &#123; a:"" &#125;이며 이 경우 기본값은 b = 0입니다.</span></span><br><span class="line">f(&#123;&#125;); <span class="comment">// 오류, 인수를 제공하려면 'a'가 필요합니다.</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Spread"><a href="#Spread" class="headerlink" title="Spread"></a>Spread</h3><ul>
+<h2 id="Spread"><a href="#Spread" class="headerlink" title="Spread"></a>Spread</h2><ul>
 <li>동일한 이름의 property인 경우 가장 오른 쪽 것으로 할당됨</li>
 <li>열거 가능한 property 값만 spread 가능(method는 불가)</li>
 <li>타입 스크립트 컴파일러의 경우 일반 함수의 매개변수를  spread 로 허용하지 않음(지원하는 것 같은데.. 어떤 경우인지 확인 필요)</li>
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> first = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> second = [<span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> bothPlus = [<span class="number">0</span>, ...first, ...second, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> defaults = &#123; food: <span class="string">"spicy"</span>, price: <span class="string">"$$"</span>, ambiance: <span class="string">"noisy"</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> search = &#123; ...defaults, food: <span class="string">"rich"</span> &#125;;     <span class="comment">//food: 'rich'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> defaults = &#123; food: <span class="string">"spicy"</span>, price: <span class="string">"$$"</span>, ambiance: <span class="string">"noisy"</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> search = &#123; food: <span class="string">"rich"</span>, ...defaults &#125;;     <span class="comment">//food: 'spicy'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> C &#123;</span><br><span class="line">  p = <span class="number">12</span>;</span><br><span class="line">  m() &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">new</span> C();</span><br><span class="line"><span class="keyword">let</span> clone = &#123; ...c &#125;;</span><br><span class="line">clone.p; <span class="comment">// 12</span></span><br><span class="line">clone.m(); <span class="comment">// 오류!</span></span><br></pre></td></tr></table></figure>
-<h2 id="소스"><a href="#소스" class="headerlink" title="소스"></a>소스</h2><p><a href="https://github.com/otawang/typescript-study-source/blob/master/src/chapter1/chapter1.ts" target="_blank" rel="noopener">https://github.com/otawang/typescript-study-source/blob/master/src/chapter1/chapter1.ts</a></p>
-<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><p><a href="https://poiemaweb.com/es6-block-scope" target="_blank" rel="noopener">https://poiemaweb.com/es6-block-scope</a><br><a href="https://www.typescriptlang.org/docs/handbook/variable-declarations.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/variable-declarations.html</a><br><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/basic-types.html</a></p>
+<h1 id="소스"><a href="#소스" class="headerlink" title="소스"></a>소스</h1><p><a href="https://github.com/otawang/typescript-study-source/blob/master/src/chapter1/chapter1.ts" target="_blank" rel="noopener">https://github.com/otawang/typescript-study-source/blob/master/src/chapter1/chapter1.ts</a></p>
+<h1 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h1><p><a href="https://poiemaweb.com/es6-block-scope" target="_blank" rel="noopener">https://poiemaweb.com/es6-block-scope</a><br><a href="https://www.typescriptlang.org/docs/handbook/variable-declarations.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/variable-declarations.html</a><br><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" rel="noopener">https://www.typescriptlang.org/docs/handbook/basic-types.html</a></p>
 <p><a href="https://typescript-kr.github.io/pages/Variable%20Declarations.html" target="_blank" rel="noopener">https://typescript-kr.github.io/pages/Variable%20Declarations.html</a><br><a href="https://typescript-kr.github.io/pages/Basic%20Types.html" target="_blank" rel="noopener">https://typescript-kr.github.io/pages/Basic%20Types.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otawang.github.io/2019/02/08/typescript-study1/" data-id="cjs004bx20008ogutivmr56up" class="article-share-link">공유</a>
+      <a data-url="http://otawang.github.io/2019/02/11/typescript-study1/" data-id="cjs004bx20008ogutivmr56up" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
@@ -420,7 +420,7 @@
       <ul>
         
           <li>
-            <a href="/2019/02/08/typescript-study1/">타입 스크립트 스터디 1주차</a>
+            <a href="/2019/02/11/typescript-study1/">타입 스크립트 스터디 1주차</a>
           </li>
         
           <li>
